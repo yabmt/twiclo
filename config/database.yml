@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: twiclo_development
+
+test:
+  <<: *default
+  database: twiclo_test
+
+production:
+  <<: *default
+  database: twiclo_production
+  username: twiclo
+  password: <%= ENV['TWICLO_DATABASE_PASSWORD'] %>
