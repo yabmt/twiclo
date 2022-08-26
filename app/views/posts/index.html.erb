@@ -9,19 +9,11 @@
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
-
     <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
+    <td><%= link_to "ツイートを編集する", edit_post_path(post.id) %></td>
   </tr>
 <% end %>
 </table>
 
 <br>
 <%= link_to '新しくツイートする', new_post_path %>
-
-
-<%
-=begin%>
- <br><br>
-<%= link_to 'DIVE INTO CODEのページへ', 'https://diveintocode.jp/'  %>
-<%
-=end%>
