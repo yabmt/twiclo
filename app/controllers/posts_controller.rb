@@ -20,13 +20,12 @@ class PostsController < ApplicationController
       render :new
     else
       if @post.save
-        redirect_to posts_path, notice: "ブログを作成しました！"
+        redirect_to posts_path, notice: "ツイートしました！"
       else
         render :new
       end
     end
   end
-
 
   def show
     @post = Post.find(params[:id])
@@ -59,5 +58,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
 end
