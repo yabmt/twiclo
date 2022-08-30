@@ -1,20 +1,15 @@
-<h1>ツイート一覧</h1>
-
-<table>
-  <tr>
-    <th>ツイート</th>
-    <th>詳細</th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.content %></td>
-    <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
-    <td><%= link_to "ツイートを編集する", edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' } %></td>
-    <td><%= link_to 'ツイートを削除する', post_path(post.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br>
-<%= link_to '新しくツイートする', new_post_path %>
+  <div class="tweet">
+  <%= link_to 'ツイートする', new_post_path %>
+  <br>
+  <br>
+    <% @posts.each do |post| %>
+      <div class="content">
+        <%= post.content %>
+        <br>
+        <%= link_to '詳細', post_path(post.id), class: "nav-link" %>
+        <%= link_to '編集', edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' }, class: "nav-link" %>
+        <%= link_to '削除', post_path(post.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: "nav-link" %>
+      </div>
+      <br>
+    <% end %>
+  </div>

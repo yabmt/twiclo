@@ -11,6 +11,20 @@
   </head>
 
   <body>
+
+    <header class="header clearfix">
+      <nav>
+        <ul class="top_menu clearfix">
+          <%= link_to "HOME", posts_path %>
+        </ul>
+      </nav>
+    </header>
+
     <%= yield %>
+
+    <footer class="footer">
+      <p>Copyright © 2022 HOGE INC All RIGHTS RESERVED.</p>
+    </footer>
+
   </body>
 </html>

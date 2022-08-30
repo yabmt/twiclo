@@ -1,15 +1,106 @@
+
+
+a:link, a:visited, a:hover, a:active {
+  color: black;
+}
+
+
+.home-link {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.header {
+  background-color: lightblue;
+  height: 25px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+  vertical-align: middle;
+  display: table-cell;
+}
+
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.top_menu li {
+  float: left;
+  padding: 15px;
+}
+
+.top_menu li a {
+  color: #fff;
+  text-decoration: none;
+} */
+
+a {
+  text-decoration:none;
+}
+
+body {
+  background-color: lavender;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tweet {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  /* border: solid 3px #000000; */
+}
+
+/*
+.tweet p {
+  margin: 0;
+  padding: 0;
+} */
+
+.detail {
+}
+
+.footer{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background-color: lightblue;
+  display: table;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+/*
+  * これは application.css にコンパイルされるマニフェスト ファイルで、すべてのファイルが含まれます。
+  * 以下に記載されています。
+  *
+  * このディレクトリ内の任意の CSS および SCSS ファイル、lib/assets/stylesheets、または任意のプラグイン
+  * vendor/assets/stylesheets ディレクトリは、相対パスを使用してここで参照できます。
+  *
+  * アプリケーション全体のスタイルをこのファイルに自由に追加でき、それらはファイルの下部に表示されます。
+  * コンパイルされたファイルであるため、ここで追加したスタイルが他の CSS/SCSS で定義されたスタイルよりも優先されます
+  * このディレクトリ内のファイル。 このファイルのスタイルは、最後の require_* ステートメントの後に追加する必要があります。
+  * 通常、スタイル スコープごとに新しいファイルを作成することをお勧めします。
+  *
+  *= require_tree .
+  *= require_self
+  */

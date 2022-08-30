@@ -7,14 +7,20 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+        <%= form.submit "戻る", name: 'back' %>
+        <br>
     </div>
   <% end %>
 
   <div class="post_content">
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_area :content %>
   </div>
   <%= form.submit %>
 <% end %>
 
-<%= link_to "ツイート一覧画面にもどる", posts_path %>
+<%
+=begin%>
+ <%= link_to "ツイート一覧", posts_path %>
+<%
+=end%>
